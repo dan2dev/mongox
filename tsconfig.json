@@ -1,0 +1,55 @@
+{
+  "compilerOptions": {
+    "outDir": "./types",
+    "target": "ES2020",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "rootDir": "src",
+    "allowJs": true,
+    "declaration": true,
+    "baseUrl": ".",
+    "importHelpers": false,
+    "checkJs": false,
+    "sourceMap": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "strictNullChecks": true,
+    "noEmit": false,
+    "noImplicitAny": false,
+    "allowSyntheticDefaultImports": true,
+    "skipDefaultLibCheck": true,
+    "allowUmdGlobalAccess": true,
+    "paths": {},
+    "lib": [
+      "dom",
+      "es5",
+      "es6",
+      "es7",
+      "esnext",
+      "esnext.asynciterable",
+      "es2015",
+      "es2015.core",
+      "es2015.promise",
+      "es2015.collection",
+      "es2015.symbol.wellknown",
+      "es2016",
+      "es2016.array.include",
+      "es2017",
+      "es2015.generator",
+      "es2015.promise",
+      "es2018.promise",
+      "es2017.object",
+      "es2017.sharedmemory",
+      "es2018",
+      "webworker"
+    ],
+    "types": [
+      "@types/window-or-global",
+      "@types/node"
+    ]
+  },
+  "include": [
+    "src/**/*",
+    "types.d.ts"
+  ]
+}

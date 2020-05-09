@@ -1,0 +1,28 @@
+import { AuthRules, JwtPayload } from "./auth";
+import { default as express } from "express";
+import type { Router } from "express";
+import { getSessionId, sessionMiddleware } from "./session";
+import compression from "compression";
+import bodyParser, { raw, text, json, Options, OptionsJson, OptionsText, OptionsUrlencoded, urlencoded } from "body-parser";
+import cookieParser from "cookie-parser";
+import cors from "cors";
+export { Application, CookieOptions, Errback, ErrorRequestHandler, Express, Handler, IRoute, IRouter, IRouterHandler, IRouterMatcher, MediaType, RequestHandler, RequestParamHandler, RouterOptions, Send, } from "express";
+export { raw, text, json, Options, OptionsJson, OptionsText, OptionsUrlencoded, urlencoded };
+export type { Router };
+export { compression, express, bodyParser, cookieParser, };
+export { sessionMiddleware, getSessionId, cors };
+export declare const secure: typeof AuthRules.Jwt.secure;
+export declare const jwtSign: typeof AuthRules.Jwt.sign;
+export declare type Role = AuthRules.Role;
+export declare type Permission = AuthRules.Permission;
+export declare type RolesPermissions = AuthRules.RolesPermissions;
+export declare const readableRoles: typeof AuthRules.readableRoles;
+export declare const writableRoles: typeof AuthRules.writableRoles;
+export declare const readAndWritableRoles: typeof AuthRules.readAndWritableRoles;
+export declare type Response = import("express").Response;
+export declare type NextFunction = import("express").NextFunction;
+declare type RequestExpress<TParams> = import("express").Request<TParams>;
+export declare type Request<TParams = any, TBody = any> = RequestExpress<TParams> & {
+    user: JwtPayload;
+    body: TBody;
+};
